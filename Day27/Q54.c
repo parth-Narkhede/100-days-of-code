@@ -1,0 +1,39 @@
+/*Write a program to print the following pattern:
+
+   *
+  ***
+ *****
+*******
+ *****
+  ***
+   *
+*/
+#include <stdio.h>
+
+int main() {
+    int i, j, k;
+
+    // Upper part
+    for (i = 1; i <= 7; i += 2) {
+        for (j = 1; j <= (7 - i) / 2; j++) {
+            printf(" ");
+        }
+        for (k = 1; k <= i; k++) {
+            printf("*");
+        }
+        printf("\n");
+    }
+
+    // Lower part
+    for (i = 5; i >= 1; i -= 2) {
+        for (j = 1; j <= (7 - i) / 2; j++) {
+            printf(" ");
+        }
+        for (k = 1; k <= i; k++) {
+            printf("*");
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
